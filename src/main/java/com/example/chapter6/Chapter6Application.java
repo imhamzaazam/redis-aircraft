@@ -12,6 +12,8 @@ import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 @SpringBootApplication
 public class Chapter6Application {
@@ -27,6 +29,7 @@ public class Chapter6Application {
         template.setKeySerializer(new StringRedisSerializer());
         return template;
     }
+
 
     public static void main(String[] args) {
         SpringApplication.run(Chapter6Application.class, args);
